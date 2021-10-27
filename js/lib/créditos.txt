@@ -1,0 +1,4 @@
+math.min.js não é de minha criação o projeto está:
+
+LINK:
+https://mathjs.org/

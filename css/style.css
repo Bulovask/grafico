@@ -1,0 +1,78 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+canvas#main-graph {
+	position: fixed;
+	box-sizing: border-box;
+	width: 80vw;
+	height: 60vh;
+	left: 10vw;
+	top: 4vh;
+	outline: 1px solid black;
+}
+
+#scope {
+	position: fixed;
+	box-sizing: border-box;
+	width: 80vw;
+	height: calc(20vh - 2rem);
+	left: 10vw;
+	bottom: calc(2rem + 15vh);
+	outline: 1px solid black;
+	border: none;
+	overflow: scroll;
+	white-space: nowrap;
+}
+
+#input {
+	position: fixed;
+	box-sizing: border-box;
+	width: 80vw;
+	height: 2rem;
+	left: 10vw;
+	bottom: 14vh;
+	outline: 1px solid black;
+	border: none;
+	overflow: scroll;
+}
+
+#config {
+	position: fixed;
+	box-sizing: border-box;
+	background-image: url("config.png");
+	background-size: 10vw 6vh;
+	background-repeat: no-repeat;
+	width: 10vw;
+	height: 6vh;
+	left: 10vw;
+	bottom: 6vh;
+	padding-top: 6vh;
+	outline: 1px solid black;
+	overflow: hidden;
+}
+
+#config:hover {
+	width: 80vw;
+	height: 90vh;
+	background-color: #fff;
+	background-position: 50% 0;
+	overflow: scroll;
+}
+
+#config:hover :is(#main-graph, #input, #scope) {
+	display: none;
+}
+
+label, input {
+	display: block;
+}
+
+#scope:focus + #main-graph{
+	display: none;
+}
+
+#scope:focus {
+	height: calc(81vh - 2rem);
+}

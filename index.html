@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset='unicode'/>
+		<meta name='viewport' content='width=device-width, user-scalable=yes, initial-scale=1.0'/>
+		<link rel='stylesheet' type='text/css' href='css/style.css'>
+		<script type='text/javascript' src='js/lib/math.min.js'></script>
+		<script type='text/javascript' src='js/analizador.js'></script>
+		
+		<script defer type='text/javascript' src='js/setup.js'></script>
+		<script defer type='text/javascript' src='js/render_function.js'></script>
+		<script defer type='text/javascript' src='js/main_loop.js'></script>
+	</head>
+	<body>
+		<textarea id="scope"></textarea>
+		<canvas id="main-graph"></canvas>
+		<input id="input" type="text" value="2x"/>
+		<!--Configurações-->
+		<div id="config">
+			<label>Escala</label>
+			<input id="scale" type="range" step="1" min=1 max=100 value="10"/>
+			<label>x</label>
+			<input id="x" type="number" value="0"/>
+			<label>y</label>
+			<input id="y" type="number" value="0"/>
+			<label>cx</label>
+			<input id="cx" type="range" step="0.1" min=0 max=1 value="0.5"/>
+			<label>cy</label>
+			<input id="cy" type="range" step="0.1" min=0 max=1 value="0.5"/>
+			<label>Eixos</label>
+			<select id="axes">
+				<option value="xy">XY</option>
+				<option value="x">X</option>
+				<option value="y">Y</option>
+				<option value="n">NENHUM</option>
+			</select>
+			<label>Modo de renderização</label>
+			<select id="modeRender">
+				<option value="0">Linha</option>
+				<option value="1">Ponto</option>
+			</select>
+			<label>Cor da função</label>
+			<input id="colorFunction" type="color" value="#ff8800"/>
+		</div>
+	</body>
+</html>
