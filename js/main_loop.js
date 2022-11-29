@@ -22,8 +22,8 @@ function loop() {
 		canvasTransform("end");
 		
 		ctx.fillStyle = "black";
-		if(setup.axes.indexOf("x") + 1) ctx.fillText("Passo X: " + setup.passoX, 0, 12);
-		if(setup.axes.indexOf("y") + 1) ctx.fillText("Passo Y: " + setup.passoY, 0, 30);
+		if(setup.axes.indexOf("x") + 1) ctx.fillText("Passo X: " + setup.passoX.toFixed(4), 0, 12);
+		if(setup.axes.indexOf("y") + 1) ctx.fillText("Passo Y: " + setup.passoY.toFixed(4), 0, 30);
 	}
 }
 

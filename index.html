@@ -10,13 +10,14 @@
 		<script defer type='text/javascript' src='js/setup.js'></script>
 		<script defer type='text/javascript' src='js/render_function.js'></script>
 		<script defer type='text/javascript' src='js/main_loop.js'></script>
+		<script defer type="text/javascript" src="js/ui.js"></script>
 	</head>
 	<body>
-		<textarea id="scope"></textarea>
 		<canvas id="main-graph"></canvas>
-		<input id="input" type="text" value="2x"/>
+		<textarea id="scope"></textarea>
+		<input id="input" type="text" value="sin(x+t)"/>
 		<!--Configurações-->
-		<div id="config">
+		<div id="config" class="hidden">
 			<label>Escala</label>
 			<input id="scale" type="range" step="1" min=1 max=100 value="10"/>
 			<label>x</label>
@@ -42,5 +43,6 @@
 			<label>Cor da função</label>
 			<input id="colorFunction" type="color" value="#ff8800"/>
 		</div>
+		<button id="toggle-config-tab" class="open-icon" type="button"></button>
 	</body>
 </html>

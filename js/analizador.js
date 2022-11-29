@@ -10,12 +10,16 @@ function gerarPontos(func, escopo, detalhe = 2) {
 	for(let x = left; x <= right; x += detalhe/ctx.s) {
 		parser.evaluate("x = " + x);
 		parser.evaluate("t = " + t);
-		parser.evaluate(escopo);
-		parser.evaluate("y = " + func);
-		pontos.push({
-			x: x,
-			y: -parser.get("y")
-		});
+		try {
+			parser.evaluate(escopo);
+			parser.evaluate("y = " + func);
+			pontos.push({
+				x: x,
+				y: -parser.get("y")
+			});
+		} catch(e){
+			
+		}
 	}
 	
 	return pontos;
