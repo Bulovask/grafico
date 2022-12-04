@@ -6,7 +6,7 @@ function loop() {
 	//Váriaveis
 	frame++;
 	
-	frame % 20 == 0 ? updateConfig() : 0;
+	frame % 3 == 0 ? updateConfig() : 0;
 	
 	if(frame % 2 == 0) {
 		t++;

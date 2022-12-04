@@ -34,6 +34,15 @@ function updateConfig() {
 	setup.modeRender = $id("modeRender").value;
 }
 
+const cam = {
+	get x() { return Number($id("x").value)},
+	get y() { return Number($id("y").value)},
+	get s() { return Number($id("scale").value)},
+	set x(v) { $id("x").value = v},
+	set y(v) { $id("y").value = v},
+	set s(v) { $id("scale").value = v}
+}
+
 function canvasTransform(m = "start") {
 	const x = ctx.cx * canvas.width + ctx.x;
 	const y = ctx.cy * canvas.height + ctx.y;
